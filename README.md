@@ -29,7 +29,9 @@ def formsgtest():
 	#display the decrypted data received
 	
 	#do your processing here
-	
+	for response in data['data']['decryptedContent']:
+        print(response['question']+': '+response['answer'])
+        
     return data
 
 if __name__ == '__main__':
