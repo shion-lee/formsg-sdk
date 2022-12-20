@@ -24,14 +24,14 @@ FORM_SECRET_KEY = os.getenv('FORM_SECRET_KEY')
 
 @app.route('/formsgtest',methods=['POST'])
 def formsgtest():
-    data = formsg.decrypt_responses(request, FORM_SECRET_KEY,securehttp=True)
+    data = formsg.decrypt_responses(request, FORM_SECRET_KEYsecurehttp=True)
     print(data)
-	#display the decrypted data received
+    #display the decrypted data received
 	
-	#do your processing here
-	for response in data['data']['decryptedContent']:
+    #do your processing here
+    for response in data['data']['decryptedContent']:
         print(response['question']+': '+response['answer'])
-        
+
     return data
 
 if __name__ == '__main__':
