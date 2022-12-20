@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "formsg-sdk"
-version = "0.1.3"
+version = "0.1.4"
 authors = [
   { name="Shion Lee", email="shionlee92@gmail.com" },
 ]
@@ -22,3 +22,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/shion-lee/formsg-sdk"

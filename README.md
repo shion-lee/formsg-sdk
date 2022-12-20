@@ -12,6 +12,29 @@ pip install formsg-sdk
 ```
 
 ## Usage
+Quickstart usage with Flask:
+
+```python
+import os
+import formsg
+from flask import Flask, request
+
+#get your FormSG's secret key from environment
+FORM_SECRET_KEY = os.getenv('FORM_SECRET_KEY')
+
+@app.route('/formsgtest',methods=['POST'])
+def formsgtest():
+    data = formsg.decrypt_responses(request, FORM_SECRET_KEY,securehttp=True)
+    print(data)
+	#display the decrypted data received
+	
+	#do your processing here
+	
+    return data
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
 
 ### Webhook Authentication and Decrypting form responses
 
